@@ -11,8 +11,9 @@
       "id": "feat_dir",
       "name": "Feat directory",
       "type": "File",
+      "optional": false,
       "description": "Feat directory to export.",
-      "command-line-key": "[INPUT]"
+      "command-line-key": "[FEAT_DIR]"
     },
     {
       "id": "output_name",
