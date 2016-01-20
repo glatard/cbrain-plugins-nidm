@@ -2,7 +2,7 @@
   "name": "nidmfsl",
   "tool-version": "latest",
   "description": "A python library to export FSL's feat results to NIDM-Results http://nidm.nidash.org/specs/nidm-results.html",
-  "command-line": "nidmfsl [FEAT_DIR] [OUTPUT]",
+  "command-line": "nidmfsl [FEAT_DIR] [D_FLAG] -o [OUTPUT]",
   "docker-image": "glatard/nidmfsl",
   "docker-index": "http://index.docker.io",
   "schema-version": "0.2",
@@ -19,19 +19,37 @@
       "id": "output_name",
       "name": "Output name",
       "type": "String",
-      "description": "Name of the NIDM output directory",
+      "description": "Name of the output. A \".nidm.zip\" or \".nidm\" (when -d is used) suffix will be appended.",
       "command-line-key": "[OUTPUT]",
       "optional": true,
       "command-line-flag": "-o",
       "default-value": "nidm"
+    },
+    {
+      "id": "directory_output",
+      "name": "Directory output",
+      "type": "Flag",
+      "description": "Produces a .nidm directory rather than a .nidm.zip file.",
+      "command-line-key": "[D_FLAG]",
+      "optional": true,
+      "command-line-flag": "-d"
     }
   ],
   "output-files": [
     {
-      "id": "output",
+      "id": "output_zip_file",
+      "name": "NIDM zip file",
+      "description": "Exported NIDM results directory, zipped.",
+      "path-template": "[OUTPUT].nidm.zip",
+      "optional": true
+    },
+    {
+      "id": "output_directory",
       "name": "NIDM directory",
-      "description": "Exported NIDM directory",
-      "path-template": "[OUTPUT]"
+      "description": "Exported NIDM results directory.",
+      "path-template": "[OUTPUT].nidm",
+      "optional": true
     }
+
   ]
 }
