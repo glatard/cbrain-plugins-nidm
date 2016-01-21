@@ -2,7 +2,7 @@
   "name": "nidmfsl",
   "tool-version": "latest",
   "description": "A python library to export FSL's feat results to NIDM-Results http://nidm.nidash.org/specs/nidm-results.html",
-  "command-line": "nidmfsl [FEAT_DIR] [D_FLAG] -o [OUTPUT]",
+  "command-line": "nidmfsl [FEAT_DIR] [OUTPUT]",
   "docker-image": "glatard/nidmfsl",
   "docker-index": "http://index.docker.io",
   "schema-version": "0.2",
@@ -24,15 +24,6 @@
       "optional": true,
       "command-line-flag": "-o",
       "default-value": "nidm"
-    },
-    {
-      "id": "directory_output",
-      "name": "Directory output",
-      "type": "Flag",
-      "description": "Produces a .nidm directory rather than a .nidm.zip file.",
-      "command-line-key": "[D_FLAG]",
-      "optional": true,
-      "command-line-flag": "-d"
     }
   ],
   "output-files": [
