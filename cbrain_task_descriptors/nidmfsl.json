@@ -31,16 +31,7 @@
       "id": "output_zip_file",
       "name": "NIDM zip file",
       "description": "Exported NIDM results directory, zipped.",
-      "path-template": "[OUTPUT].nidm.zip",
-      "optional": true
-    },
-    {
-      "id": "output_directory",
-      "name": "NIDM directory",
-      "description": "Exported NIDM results directory.",
-      "path-template": "[OUTPUT].nidm",
-      "optional": true
+      "path-template": "[OUTPUT].nidm.zip"
     }
-
   ]
 }
