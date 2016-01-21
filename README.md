@@ -1,4 +1,4 @@
-# CBRAIN plugins NIDM
+# CBRAIN plugins for the NeuroImaging Data Model
 
 This is a CBRAIN plugin for [NIDM] (http://nidm.nidash.org)
 exporters. It currently includes the following tools:
